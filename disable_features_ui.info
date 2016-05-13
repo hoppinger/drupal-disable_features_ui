@@ -1,0 +1,4 @@
+name = Disable Features UI
+description = Since we don't use the UI of the Features module, let's disable this, so we don't have any security issue with it.
+core = 7.x
+

@@ -1,0 +1,17 @@
+<?php
+
+/**
+ * Implements hook_menu_alter().
+ */
+function disable_features_ui_menu_alter(&$items) {
+  if (!function_exists('features_menu')) {
+    return;
+  }
+
+  $keys = array_keys(features_menu());
+  foreach ($keys as $key) {
+    if (isset($items[$key])) {
+      unset($items[$key]);
+    }
+  }
+}
